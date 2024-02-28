@@ -1,0 +1,149 @@
+/* Write your CSS below */
+
+@font-face {
+    font-family: SharpSans-Bold;
+    src: url('/fonts/SharpSans-No1-Black.otf');
+}
+
+@font-face {
+    font-family: SharpSans-Medium;
+    src: url('/fonts/SharpSans-No1-Medium.otf');
+}
+
+body {
+    background-image: url('/img/login-bg.jpg');
+}
+
+.wsjLogo {
+    max-width: 60%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.register-form, .signin-form, .feedback, .posts {
+    color: white;
+    border-style: solid;
+    border-color: #5AC8E0;
+    background: linear-gradient(151deg, black 90%, #5AC8E0 10%);
+}
+
+.indexTitle {
+    color: white;
+    letter-spacing: 3px;
+    font-family: SharpSans-Bold;
+}
+
+.nav-tabs {
+    border-block-end: none;
+}
+
+.singInContainer, .registerContainer, .feedbackContainer {
+    max-width: 90%;
+    font-family: SharpSans-Medium;
+}
+
+.signInTitle, .registerTitle {
+    font-family: SharpSans-Bold;
+    letter-spacing: 3px;
+}
+
+.signInInput, .registerInput {
+    border-radius: 0;
+}
+
+.signInButton {
+    border-radius: 0;
+    font-family: SharpSans-Bold;
+    padding: 20px 40px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    margin-top: 10px;
+}
+
+.indexTabs {
+    font-family: SharpSans-Bold;
+}
+
+.nav-tabs .nav-item .nav-link {
+    color: #000000;
+    background-color: gray;
+}
+
+.nav-tabs .nav-item .nav-link.active {
+    background-color: #5AC8E0;
+    color: #FFF;
+}
+
+.table {
+    font-family: SharpSans-Medium;
+}
+
+.postTitle {
+    font-family: SharpSans-Bold;
+    letter-spacing: 1px;
+    font-size: 25px;
+}
+
+.postButton {
+    border-radius: 0;
+    font-family: SharpSans-Bold;
+    padding: 15px 35px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    margin-top: 10px;
+}
+
+.postButtonTable {
+    padding: 10px;
+}
+
+.postPagination {
+    display: flex;
+    justify-content: center;
+    --bs-pagination-border-radius: 0 !important;
+    font-family: SharpSans-Bold;
+}
+
+.page-link.active, .active > .page-link {
+    z-index: 3;
+    color: var(--bs-pagination-active-color);
+    background-color: black;
+    border-color: black;
+}
+
+.page-link:hover {
+    z-index: 2;
+    color: black;
+    background-color: var(--bs-pagination-hover-bg);
+    border-color: var(--bs-pagination-hover-border-color);
+}
+
+.page-link {
+    color: black;
+}
+
+.posts-form {
+    font-family: SharpSans-Medium;
+}
+
+.postCard {
+    font-family: SharpSans-Medium;
+    border-radius: 0;
+    color: #000000;
+}
+
+.commentsButton {
+    border-radius: 0;
+    font-family: SharpSans-Bold;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+.table .shortTitle {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 200px;
+}
