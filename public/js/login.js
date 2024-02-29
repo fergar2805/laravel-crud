@@ -81,6 +81,8 @@ $(document).ready(function() {
                         "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr(
                             "content"
                         ),
+                        "content-type": "application/json",
+                        Accept: "application/json",
                     },
                 })
                 .then((response) => {
