@@ -15,9 +15,6 @@ phases:
     commands:
       - composer install
       - npm install
-  build:
-     commands:
-         - php artisan migrate --force
 artifacts:
   files:
     - '**/*'
