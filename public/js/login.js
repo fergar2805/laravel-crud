@@ -91,11 +91,11 @@ $(document).ready(function () {
                     }, 5000);
                     */
                     })
-                    .catch((e) => {
+                    .catch((error) => {
                         debugger;
                         $(".alert").show();
                         this.resetUser();
-                        console.log(e.response);
+                        console.log(error.response);
                     });
             },
         },

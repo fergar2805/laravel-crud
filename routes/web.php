@@ -3,6 +3,7 @@
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\UserController;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -42,3 +43,9 @@ Route::get('/comment/deleteComment/{id}', [CommentController::class, 'deleteComm
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/migrate', function() {
+    Artisan::call('migrate');
+    
+    return 'Migration executed succesfully';
+});
