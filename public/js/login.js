@@ -77,7 +77,6 @@ $(document).ready(function () {
                 axios
                     .post("/user/create", data)
                     .then((response) => {
-                        debugger;
                         let user = Object.assign({}, this.user);
                         this.resetUser();
                         this.$emit("register-form", {
@@ -92,7 +91,6 @@ $(document).ready(function () {
                     */
                     })
                     .catch((error) => {
-                        debugger;
                         $(".alert").show();
                         this.resetUser();
                         console.log(error.response);
