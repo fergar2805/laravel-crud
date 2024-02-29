@@ -30,7 +30,7 @@ class UserController extends Controller
      */
     public function create(Request $request)
     {
-
+        dd('si');
         $user = User::create([
             'first_name' => $request->firstName,
             'last_name' => $request->lastName,
