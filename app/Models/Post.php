@@ -17,6 +17,13 @@ class Post extends Model
         'content',
     ];
 
+    /**
+     * The attributes that aren't mass assignable.
+     *
+     * @var array
+     */
+    protected $guarded = [];
+
     public function user()
     {
         return $this->hasOne(User::class, 'id', 'user_id');

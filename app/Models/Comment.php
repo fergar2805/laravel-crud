@@ -11,6 +11,13 @@ class Comment extends Model
 
     protected $table = 'comments';
 
+    /**
+     * The attributes that aren't mass assignable.
+     *
+     * @var array
+     */
+    protected $guarded = [];
+
     protected $fillable = [
         'user_id',
         'post_id',
