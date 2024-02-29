@@ -76,13 +76,19 @@ $(document).ready(function() {
             };
 
             axios
-                .post('/user/create', data)
-                .then(response => {
+                .post("/user/create", data, {
+                    headers: {
+                        "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr(
+                            "content"
+                        ),
+                    },
+                })
+                .then((response) => {
                     let user = Object.assign({}, this.user);
                     this.resetUser();
-                    this.$emit('register-form', {
-                      type: 'register',
-                      data: user
+                    this.$emit("register-form", {
+                        type: "register",
+                        data: user,
                     });
 
                     /*
@@ -90,11 +96,12 @@ $(document).ready(function() {
                         window.location.href = response.data.url;
                     }, 5000);
                     */
-                }).catch(e => {
-                $('.alert').show();
-                this.resetUser();
-                console.log(e.response);
-            });
+                })
+                .catch((e) => {
+                    $(".alert").show();
+                    this.resetUser();
+                    console.log(e.response);
+                });
         }
       },
 
